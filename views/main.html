@@ -36,6 +36,11 @@
 
 		<md-content layout-padding>
 			<md-list>
+			<md-list-item style="text-align: center;">
+				<md-button flex>
+						Cystic Fibrosis Menu
+					</md-button>
+					</md-list-item>
 				<div class="profile-image">
         			<img src="{{profile}}" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
         			<h3 align="center">{{person}}</h3>
@@ -43,28 +48,28 @@
       			</div>
 				<md-list-item>
 					<md-button flex class="align-left" ng-click="c.toggleNav()" ui-sref="cf.home">
-						<md-icon class="material-icons">home</md-icon>
+						<md-icon  class="menu-icon" class="material-icons">home</md-icon>
 						Home
 					</md-button>
 					<md-divider></md-divider>
 				</md-list-item>
 				<md-list-item>
 					<md-button flex class="align-left" ng-click="c.toggleNav()" ui-sref="cf.information">
-						<md-icon class="material-icons">info</md-icon>
+						<md-icon  class="menu-icon" class="material-icons">info</md-icon>
 						Information
 					</md-button>
 					<md-divider></md-divider>
 				</md-list-item>
 				<md-list-item>
 					<md-button flex class="align-left" ng-click="c.toggleNav()" ui-sref="cf.clinic">
-						<md-icon class="material-icons">phone</md-icon>
+						<md-icon  class="menu-icon" class="material-icons">phone</md-icon>
 						Clinic Contacts
 					</md-button>
 					<md-divider></md-divider>
 				</md-list-item>
 				<md-list-item>
 					<md-button flex class="align-left" ng-click="c.toggleNav()" ui-sref="cf.appointment">
-						<md-icon class="material-icons">alarm</md-icon>
+						<md-icon class="menu-icon"  class="material-icons">alarm</md-icon>
 						Appointments
 					</md-button>
 					<md-divider></md-divider>

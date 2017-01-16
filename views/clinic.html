@@ -1,15 +1,19 @@
-<div flex>
-    <div layout="row" flex>
-        <div flex></div>
-        <md-button class="md-raised md-primary" ng-click="c.newClinicModal($event)">
+<div layout-padding flex>
+    <div  flex>
+    <span style="text-align: center"><h3>Clinic Numbers</h3></span>
+    </div>
+        <div class="addbutton" flex>
+            <md-button  class="md-fab md-primary md-hue-2" ng-click="c.newClinicModal($event)">
             <md-icon class="material-icons">add</md-icon>
-            New Clinic
         </md-button>
+        </div>
+       
     </div>
 
-    <md-list-item class="md-2-line" ng-repeat="hospital in c.hospitals">
+    <md-list-item class="md-3-line" ng-repeat="hospital in c.hospitals">
         <div class="md-list-item-text">
-            <h3>{{ hospital.name }}, <small>{{ hospital.location }}</small></h3>
+            <h3>{{ hospital.name }}</h3>
+             <h4>{{ hospital.location }}</h4>
             <p>{{ hospital.number }}</p>
         </div>
         

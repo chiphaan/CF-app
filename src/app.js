@@ -56,29 +56,21 @@ app.controller('AppController', function ($scope, $mdSidenav, $timeout, $cookies
 	ctrl.appoinments = [
 		{
 			dr: "Dr.Azeem",
-			type: "Physician",
+			type: "ADK",
 			date: "1/24/2017"
 		},
 		{
 			dr: "Dr.John",
-			type: "E.N.T",
+			type: "IGMH",
 			date: "1/30/2017"
 		},
 		{
 			dr: "Dr.Thomas",
-			type: "Speacialist",
+			type: "AMDC",
 			date: "02/02/2017"
 		}
+		
 	];
-
-	ctrl.today=function($scope){
-		var dateee = ctrl.appoinments.dr;
-		// angular.forEach(ctrl.appoinments,function(value, key){
-		// 	var mydate=($scope.date - appointment.date);
-		// 	console.log(mydate);
-		// });
-		console.log(dateee);
-	}
 
 	ctrl.openMenu = function ($mdOpenMenu, ev) {
 		$mdOpenMenu(ev);

@@ -1,17 +1,19 @@
-<div layout="row" flex>
-  <div flex></div>
-  <md-button class="md-raised md-primary" ng-click="c.appointmentModal($event)">
-    <md-icon class="material-icons">add</md-icon>
-    New Appointments
-  </md-button>
-</div>
-
-<div >
+<div layout-padding flex>
+    <div  flex>
+    <span style="text-align: center"><h3>Appointments</h3></span>
+    </div>
+        <div class="addbutton" flex>
+            <md-button  class="md-fab md-primary md-hue-2" ng-click="c.appointmentModal($event)">
+            <md-icon class="material-icons">add</md-icon>
+        </md-button>
+        </div>
+       
+    </div>
   <md-divider></md-divider>
-  <md-list-item class="md-2-line" flex ng-repeat="appointment in c.appoinments">
+  <md-list-item class="md-3-line" flex ng-repeat="appointment in c.appoinments">
     <div class="md-list-item-text" >
-      <h3>{{ appointment.dr }}, <small>{{ appointment.type }}</small></h3>
-      <!-- <md-datepicker ng-model="{{ appointment.time }}" md-placeholder="Enter date" disabled></md-datepicker> -->
+      <h3>{{ appointment.dr }}</h3>
+       <h4>{{ appointment.type }}</h4>
       <p>{{ appointment.date| date:'yyyy-MM-dd' }}</p>
     </div>
     <md-menu md-position-mode="target-right target">
@@ -39,14 +41,4 @@
         </md-menu>
     <md-divider></md-divider>
   </md-list-item>
-</div>
-<div>
-
-<h3>
-    {{mydate}}
-</h3>
-<md-button class="md-raised md-primary" ng-click="c.today()">
-    <md-icon class="material-icons">add</md-icon>
-    test
-  </md-button>
 </div>
