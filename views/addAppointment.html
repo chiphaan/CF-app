@@ -1,0 +1,20 @@
+<div>
+    <form  layout="column" layout-wrap layout="center">
+    <md-input-container flex>
+        <label>Doctor Name</label>
+        <input required name="username" ng-model="ctrl.user.username">
+        <div ng-messages="loginForm.username.$error" role="alert" multiple>
+            <div ng-message="required" class="my-message">Enter Doctor name.</div>
+        </div>
+    </md-input-container>
+    <md-input-container flex>
+        <label>Speaciality</label>
+        <input required name="username" ng-model="ctrl.user.username">
+        <div ng-messages="loginForm.username.$error" role="alert" multiple>
+            <div ng-message="required" class="my-message">Enter Speaciality.</div>
+        </div>
+        </md-input-container>
+        <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+        <md-button class="md-raised md-primary" >Save Appoinment</md-button>
+    </form>
+</div>

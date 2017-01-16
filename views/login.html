@@ -1,0 +1,28 @@
+<div layout="row" layout-fill layout-align="center center" layout-wrap class="default-bg">
+    <md-content class="md-padding transparent-bg" flex="100" flex-gt-sm="50" flex-gt-md="30">
+        <div layout="row" layout-align="center center">
+            <img class="login-logo md-avatar" src="./img/logo.png">
+        </div>
+        <div class="login-panel" layout-padding>
+            <form role="form" name="loginForm" class="less-margin-inputs" novalidate layout="column" layout-wrap>
+                <md-input-container flex>
+                    <label>Username</label>
+                    <input required name="username" ng-model="ctrl.user.username" autocomplete="off">
+                    
+                    <div ng-messages="loginForm.username.$error" role="alert" multiple>
+                        <div ng-message="required" class="my-message">You must type a username.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Password</label>
+                    <input type="password" required name="password" ng-model="ctrl.user.password">
+                    
+                    <div ng-messages="loginForm.password.$error" role="alert" multiple>
+                        <div ng-message="required" class="my-message">You must type a password.</div>
+                    </div>
+                </md-input-container>
+                <md-button class="md-raised md-primary" ng-disabled="loginForm.$invalid" ng-click="ctrl.authenticate()">Login</md-button>
+            </form>
+        </div>
+    </md-content>
+</div>

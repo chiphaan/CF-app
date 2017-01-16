@@ -1,0 +1,46 @@
+<md-dialog aria-label="Clinic">
+    <form name="clinicForm" novalidate="true" ng-cloak layout="column" flex>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>New Clinic</h2>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content" flex>
+                <md-input-container flex>
+                    <label>Hospital Name</label>
+                    <input required name="username" ng-model="ctrl.hospital.name" md-autofocus="true">
+                    
+                    <div ng-messages="clinicForm.username.$error" role="alert" multiple>
+                        <div ng-message="required" class="my-message">Enter hospital name.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Hospital Location</label>
+                    <input required name="password" ng-model="ctrl.hospital.location">
+                    
+                    <div ng-messages="clinicForm.password.$error" role="alert" multiple>
+                        <div ng-message="required" class="my-message">Enter hospital location.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Hospital Number</label>
+                    <input required name="password" ng-model="ctrl.hospital.number">
+                    
+                    <div ng-messages="clinicForm.password.$error" role="alert" multiple>
+                        <div ng-message="required" class="my-message">Enter hospital number.</div>
+                    </div>
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button ng-click="cancel()">
+                Cancel
+            </md-button>
+            <md-button ng-click="save()" ng-disabled="clinicForm.$invalid">
+                Save
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

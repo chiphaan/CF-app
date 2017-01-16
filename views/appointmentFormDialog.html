@@ -1,0 +1,42 @@
+<md-dialog aria-label="Appoinments">
+    <form name="clinicForm" novalidate="true" ng-cloak layout="column" flex>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>New Appoinment</h2>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content" flex>
+                <md-input-container flex>
+                    <label>Doctor Name</label>
+                    <input required name="appoinments" ng-model="ctrl.appointment.dr" md-autofocus="true">
+                    
+                    <div ng-messages="clinicForm.username.$error" role="alert" multiple>
+                        <div ng-message="required" class="my-message">Enter Doctors name.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Speciality</label>
+                    <input required name="password" ng-model="ctrl.appointment.type">
+                    
+                    <div ng-messages="clinicForm.password.$error" role="alert" multiple>
+                        <div ng-message="required" class="my-message">Enter Speciality</div>
+                    </div>
+                </md-input-container>
+                <md-input-container flex>
+                    <label>Date</label>
+                    <md-datepicker date-format="MM/dd/yyyy" date-type="string" ng-model="ctrl.appointment.date" md-placeholder="Enter date"></md-datepicker>
+                </md-input-container>
+            </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button ng-click="cancel()">
+                Cancel
+            </md-button>
+            <md-button ng-click="save()" ng-disabled="clinicForm.$invalid">
+                Save
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

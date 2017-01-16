@@ -1,0 +1,91 @@
+.align-left {
+	text-align: left !important;
+}
+
+div:link {
+  color: aquamarine;
+}
+
+/*.icon-size{
+	font-size: 50px;
+	height: 50px;
+	width: 50px;
+}
+.md-fab md-primary md-hue-2 {
+	font-size: 90px;
+	height: 90px;
+	width: 90px;
+}*/
+
+.cf-main-container {
+	position: relative;
+	height: 100%;
+}
+
+.relative {
+	position: relative;
+}
+
+.login-panel {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.less-margin-inputs > md-input-container {
+	margin: 5px;
+}
+.heading > h5 {
+	margin: 1px;
+}
+
+.profile-image >
+    img{
+        border-radius:50%;
+        margin:10px;
+        border:4px solid rgb(255, 190, 170);
+    
+}
+
+.login-logo {
+	object-fit: cover;
+	width: 150px;
+	height: 150px;
+}
+
+.default-bg {
+	background-image: url('../img/bg.png');
+	background-size: cover;
+}
+
+.transparent-bg {
+	background: initial !important;
+}
+.appoint-header{
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+}
+.bottom-footer {
+	position: fixed;
+	bottom: 0;
+	/*background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgb(255, 190, 170) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3) 0%, rgb(255, 190, 170) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,rgb(255, 190, 170) 100%);*/
+    width: 100%;
+    z-index: 1;
+
+}
+.clinic-inputs{
+	position: fixed;
+	bottom: 0;
+	/*width: 100%;*/
+	
+}
+.clinic-footer{
+	background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.margin-bottom-20 {
+	margin-bottom: 70px;
+}

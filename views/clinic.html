@@ -1,0 +1,42 @@
+<div flex>
+    <div layout="row" flex>
+        <div flex></div>
+        <md-button class="md-raised md-primary" ng-click="c.newClinicModal($event)">
+            <md-icon class="material-icons">add</md-icon>
+            New Clinic
+        </md-button>
+    </div>
+
+    <md-list-item class="md-2-line" ng-repeat="hospital in c.hospitals">
+        <div class="md-list-item-text">
+            <h3>{{ hospital.name }}, <small>{{ hospital.location }}</small></h3>
+            <p>{{ hospital.number }}</p>
+        </div>
+        
+        <md-menu md-position-mode="target-right target">
+            <md-button class="md-icon-button" ng-click="c.openMenu($mdOpenMenu, $event)">
+                <md-icon class="material-icons">delete</md-icon>
+            </md-button>
+
+            <md-menu-content width="4">
+                <span class="md-padding">Are you sure you want to delete?</span>
+                <div layout="row">
+                    <md-menu-item flex="50">
+                        <md-button ng-click="c.deleteHospital(hospital)">
+                            <md-icon class="material-icons">check</md-icon>
+                            Yes
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item flex="50">
+                        <md-button>
+                            <md-icon class="material-icons">close</md-icon>
+                            No
+                        </md-button>
+                    </md-menu-item>
+                </div>
+            </md-menu-content>
+        </md-menu>
+
+        <md-divider ng-if="!$last"></md-divider>
+    </md-list-item>
+</div>
